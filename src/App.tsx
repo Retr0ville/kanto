@@ -3,7 +3,7 @@ import Home from './pages/Home';
 import './App.css';
 
 const App = () => (
-  <div className="bg-light">
+  <div className="">
     <header className="fs-1 fw-bold d-flex align-items-center justify-content-center py-2 mb-4 text-light bg-dark w-100">
       <div className="ms-auto">
         Kando.io&trade;
