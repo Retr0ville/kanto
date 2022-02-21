@@ -54,7 +54,7 @@ const CardWrapper = styled.div`
     &:hover {
       color: #000;
     transform: scale(1.1);
-
+    }
   }
   @media (max-width: 768px) {
   width: 14rem;
