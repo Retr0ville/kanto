@@ -49,6 +49,13 @@ const CardWrapper = styled.div`
     width: 25px;
     height: 25px;
   }
+  .util-btn{
+    transition: all 0.4s ease-in-out;
+    &:hover {
+      color: #000;
+    transform: scale(1.1);
+
+  }
   @media (max-width: 768px) {
   width: 14rem;
   min-width: 180px;
@@ -69,14 +76,14 @@ const TodoCard = ({
         <hr />
         {todo.title}
       </div>
-      <div className="controls text-dark d-flex gap-3 flex-column align-items-center justify-content-start me-3 mt-2">
-        <div onClick={() => { handleComplete(todo.id); }} role="button" className="bg-success rounded-circle text-center">
+      <div className="controls text-dark d-flex flex-column align-items-center justify-content-start me-3 mt-2">
+        <div onClick={() => { handleComplete(todo.id); }} role="button" title="update" className="util-btn mb-3 bg-success rounded-circle text-center">
           <FontAwesomeIcon icon={faCheckDouble} />
         </div>
-        <div onClick={() => { handleDelete(todo.id); }} role="button" className="bg-danger rounded-circle text-center">
+        <div onClick={() => { handleDelete(todo.id); }} role="button" title="delete" className="util-btn mb-3 bg-danger rounded-circle text-center">
           <FontAwesomeIcon icon={faTrashCan} />
         </div>
-        <div onClick={() => { handleEdit(todo.id); }} role="button" className="bg-warning rounded-circle text-center" data-bs-toggle="modal" data-bs-target="#editModal">
+        <div onClick={() => { handleEdit(todo.id); }} role="button" title="edit" className="util-btn bg-warning rounded-circle text-center" data-bs-toggle="modal" data-bs-target="#editModal">
           <FontAwesomeIcon icon={faEdit} />
         </div>
       </div>
