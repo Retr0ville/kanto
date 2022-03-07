@@ -147,9 +147,11 @@ const Home = () => {
         handleAddNew={handleAddNewTodo}
         handleEditSave={handleEditModalSave}
       />
-      <div className="row w-100 d-flex align-items-center justify-content-around">
-        {message && <div className="alert alert-success bg-dark text-light message">{message}</div>}
-        {
+      <div className="row w-100 d-flex align-items-center">
+        <div className="col-11 offset-1">
+          <div className="row">
+            {message && <div className="alert alert-success bg-dark text-light message">{message}</div>}
+            {
       isLoading
         && (
           <SpinnerWrapper>
@@ -171,7 +173,7 @@ const Home = () => {
           </SpinnerWrapper>
         )
         }
-        {
+            {
            !isLoading
          && (
            error ? (
@@ -190,6 +192,8 @@ const Home = () => {
              )))
          )
         }
+          </div>
+        </div>
       </div>
     </div>
   );
